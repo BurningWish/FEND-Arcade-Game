@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="game-info">
+            <h1>Arcade Game</h1>
+            <h3>Developed using HTML Canvas, Javascript and CSS</h3>
+            <h3>Developed by <a href="https://github.com/BurningWish">BurningWish</a></h3>
+            <h3>It is Udacity FSND Nanodegree Project 4.</h3>
+            <h3>I had lots of fun developing this game, and wish you a happy time playing it!</h3>
+        </aside>
+        <div class="game-content">
+            <canvas width="505" height="606"></canvas>
+        </div>
+        <aside class="game-tutorial">
+            <h2>How to play the game?</h2>
+            <h4>Game Overview</h4>
+                <ol>
+                    <li>You need to hit at least 100 points to win the game.</li>
+                    <li>Move your character around to collect gems to earn points.</li>
+                    <li><span style="color: green">Green Gem</span> = 10 pts, <span style="color: blue">Blue Gem</span> = 15 pts, <span style="color:orange">Orange Gem</span> = 20 pts.</li>
+                    <li>Be careful, if you get hit by a bug, you will lose 20 pts and return to starting point.</li>
+                </ol>
+            <h4>Game Control</h4>
+                <ol>
+                    <li>Use &larr; &uarr; &rarr; &darr; to make your character move around.</li>
+                    <li>Use space button to pause the game at any time if your like.</li>
+                    <li>When you win the game (have more than 100 pts), press space to restart the game.</li>
+                </ol>
+        </aside>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>

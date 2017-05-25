@@ -1,0 +1,52 @@
+body {
+    font-family: 'Bree Serif', serif;
+    color: #31c7de;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+canvas {
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+h3 {
+    margin-bottom: 60px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-info {
+    width: 25%;
+    order: 0;
+    padding-left: 20px;
+}
+
+.game-content {
+    width: 50%;
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-tutorial {
+    width: 20%;
+    order: 2;
+    text-align: left;
+    padding: 5px;
+}
+
+li {
+    margin-bottom: 5px;
+}

@@ -1,3 +1,5 @@
+'use strict'
+
 /* Engine.js
  * This file provides the game loop functionality (update entities and render),
  * draws the initial game board on the screen, and then calls the update and
@@ -101,7 +103,7 @@ var Engine = (function(global) {
         for (var i = 0; i < allEnemies.length; i++) {
             var enemy = allEnemies[i];
             // if an enemy and the player are in the same row, and they are close in x coordinate
-            if ((Math.abs(enemy.y - player.y) == 10) & (Math.abs(enemy.x - player.x) <= 40)) {
+            if ((Math.abs(enemy.y - player.y) == 10) && (Math.abs(enemy.x - player.x) <= 40)) {
                 // we can jump out of the loop if we find one collision event, since that's enough
                 collision = true;
 
@@ -132,7 +134,7 @@ var Engine = (function(global) {
     function checkGemCollision() {
 
         // If the player and the gem are in the same row and close in x coordiate, the collision happens
-        if ((Math.abs(player.y - gem.y) == 20) & (Math.abs(player.x - gem.x) <= 40) & !game.victory) {
+        if ((Math.abs(player.y - gem.y) == 20) && (Math.abs(player.x - gem.x) <= 40) && !game.victory) {
 
             // add the corresponding bonus of the gem to the player score
             player.score += gem.bonus;
@@ -303,7 +305,7 @@ var Engine = (function(global) {
 
     // The function for rendering text, when game is paused by the player
     function renderPauseText() {
-        if (game.isPaused & !game.victory) {
+        if (game.isPaused && !game.victory) {
             // Only render the following text, if game is being paused, and player hasn't won yet
             ctx.font = '30pt Impact';
             ctx.textAlign = 'center';
@@ -320,7 +322,7 @@ var Engine = (function(global) {
 
     // The function for rendering text, when game is paused by the victory
     function renderVictoryText() {
-        if (game.isPaused & game.victory) {
+        if (game.isPaused && game.victory) {
             // Only render the following text, if game is being paused, and player has won
             ctx.font = '30pt Impact';
             ctx.textAlign = 'center';

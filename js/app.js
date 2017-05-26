@@ -1,3 +1,5 @@
+'use strict'
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // The image/sprite for our enemies, this uses
@@ -53,7 +55,7 @@ Player.prototype.handleInput = function(key) {
     switch (key) {
         case 'left':
             // If left key got pressed
-            if (this.x >= 101 & !game.isPaused) {
+            if (this.x >= 101 && !game.isPaused) {
                 // If player will not move out of canvas, and game is not being paused, let player move left
                 this.x -= 101;
             }
@@ -61,7 +63,7 @@ Player.prototype.handleInput = function(key) {
 
         case 'right':
             // If right key got pressed
-            if (this.x <= 303 & !game.isPaused) {
+            if (this.x <= 303 && !game.isPaused) {
                 // If player will not move out of canvas, and game is not being paused, let player move right
                 this.x += 101;
             }
@@ -69,7 +71,7 @@ Player.prototype.handleInput = function(key) {
 
         case 'up':
             // If up key got pressed
-            if (this.y >= 72 & !game.isPaused) {
+            if (this.y >= 72 && !game.isPaused) {
                 // If player will not move out of canvas, and game is not being paused, let player move up
                 this.y -= 83;
             }
@@ -77,7 +79,7 @@ Player.prototype.handleInput = function(key) {
 
         case 'down':
             // If up key got pressed
-            if (this.y <= 322 & !game.isPaused) {
+            if (this.y <= 322 && !game.isPaused) {
                 // If player will not move out of canvas, and game is not being paused, let player move down
                 this.y += 83;
             }
